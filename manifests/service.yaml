@@ -11,6 +11,7 @@ spec:
   - port: 5000
     protocol: TCP
     targetPort: 5000
+    nodePort:32232
   selector:
     run: app
   type: NodePort
