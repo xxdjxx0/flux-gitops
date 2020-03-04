@@ -19,7 +19,7 @@ spec:
         run: app
     spec:
       containers:
-      - image: <Registry FQDN>:4443/admin/app:v0.0.2
+      - image: <Registry FQDN>:4443/admin/cats:v0.0.2
         name: app
         ports:
         - containerPort: 5000
