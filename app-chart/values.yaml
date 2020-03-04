@@ -16,7 +16,7 @@ service:
   enabled: true
   type: NodePort
   port: 5000
-  nodePort:
+  nodePort: 32232
 
 ingress:
   enabled: false
