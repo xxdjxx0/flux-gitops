@@ -4,15 +4,15 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    run: VAR_NAME
-  name: VAR_NAME
+    run: app
+  name: app
 spec:
   ports:
   - port: 5000
     protocol: TCP
     targetPort: 5000
   selector:
-    run: VAR_NAME
+    run: app
   type: NodePort
 status:
   loadBalancer: {}
