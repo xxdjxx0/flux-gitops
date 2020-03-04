@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify
 import random
+import socket
 
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
@@ -28,7 +29,16 @@ def index():
 @app.route('/api')
 def api():
     url = random.choice(images)
-    return jsonify({"cat": url})
+    podname = socket.gethostname()
+    return jsonify({"version": "GIT_HASH", "podname": podname, "cat": url})
+
+@app.route('/alive')
+def alive():
+    return "OK"
+
+@app.route('/ready')
+def ready():
+    return "OK"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
