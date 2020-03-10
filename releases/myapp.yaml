@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: myapp
   chart:
-    git: ssh://git@github.com/<your GH username>/production-kube-code 
+    git: ssh://git@github.com/<your GH username>/flux-gitops
     ref: flux
     path: app-chart
     name: app-chart
