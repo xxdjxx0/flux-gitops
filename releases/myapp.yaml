@@ -1,0 +1,16 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: app
+  namespace: default
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: glob:0.0.*
+spec:
+  releaseName: myapp
+  chart:
+    git: ssh://git@github.com/<your GH username>/production-kube-code 
+    ref: flux
+    path: app-chart
+    name: app-chart
