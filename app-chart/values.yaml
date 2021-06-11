@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: <registry FQDN>:4443/admin/cats
+  repository: https://ec2-35-159-53-57.eu-central-1.compute.amazonaws.com:4443/admin/cats
   tag: v0.0.3
   pullPolicy: IfNotPresent
 

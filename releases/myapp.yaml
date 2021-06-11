@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: myapp
   chart:
-    git: ssh://git@github.com/<your GH username>/flux-gitops
+    git: ssh://git@github.com/xxdjxx0/flux-gitops
     ref: flux
     path: app-chart
     name: app-chart
